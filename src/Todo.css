@@ -1,0 +1,47 @@
+.modal_body {
+  position: absolute;
+  width: 400px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.model_header {
+  margin-bottom: 10px;
+}
+.model_content {
+  display: flex;
+  margin-bottom: 10px;
+}
+.model_content_textarea {
+  width: 100%;
+  font-family: arial;
+  resize: none;
+  height: 100px;
+}
+.model_content_btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.model_content_btn_submit,
+.model_content_btn_cancel {
+  padding: 6px 15px;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.model_content_btn_submit:hover,
+.model_content_btn_cancel:hover {
+  opacity: 0.8;
+}
+
+.model_content_btn_submit {
+  background: #007bff;
+  color: #fff;
+}
+.model_content_btn_cancel {
+  background: #ddd;
+}

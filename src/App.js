@@ -15,6 +15,7 @@ class App extends React.Component {
 
     this.state = {
       todoInput: "",
+      todoLoading: false,
       todos: [],
     };
   }
@@ -45,6 +46,7 @@ class App extends React.Component {
           todos.push({ id: doc.id, todo: doc.data().todo })
         );
         this.setState({ todos: todos });
+        this.setState({ todoLoading: true });
       });
   }
 
@@ -69,7 +71,9 @@ class App extends React.Component {
 
           {!this.state.todos.length ? (
             <div className="main__loading">
-              <p className="main__loading_text">Loading...</p>
+              <p className="main__loading_text">
+                {!this.state.todoLoading ? "Loading..." : "No Item Found"}
+              </p>
             </div>
           ) : (
             this.state.todos.map((todo, index) => (
